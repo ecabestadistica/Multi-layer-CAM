@@ -4,14 +4,14 @@ This repository contains tools for visualizing Class Activation Maps (CAM) on an
 
 ## 📋 Features
 
-- **Web Application (`app.py`)**: Interactive Flask-based web interface to browse through test images with multiple CAM visualizations
-- **Command-Line Tool (`cam_comparison.py`)**: Interactive terminal-based tool to compare different CAM methods side-by-side
+- **Web Application (`app.py`)**: Interactive Flask-based web interface to browse through test images with multiple CAM visualizations.
+- **Command-Line Tool (`cam_comparison.py`)**: Interactive terminal-based tool to compare different CAM methods.
 
 ### CAM Methods Included:
 - **Original Grad-CAM**: Standard Gradient-weighted Class Activation Mapping
-- **MD-CAM**: Multi-Depth CAM (biases deeper layers)
-- **MF-CAM**: Multi-Focus CAM (biases shallower layers)
-- **Gaussian-CAM**: Gaussian-weighted CAM (emphasizes middle layers)
+- **MD-CAM**: MultiDeep-CAM (biases deeper layers)
+- **MF-CAM**: MultiFine-CAM (biases shallower layers)
+- **Gaussian-CAM**: Gaussian-CAM (emphasizes middle layers)
 
 ## 🔧 Prerequisites
 
@@ -73,7 +73,7 @@ python app.py
 **Features:**
 - Browse through all test images with Next/Previous buttons
 - View prediction results with confidence scores
-- Compare Original Grad-CAM, MD-CAM, MF-CAM, and Gaussian-CAM side-by-side
+- Compare Original Grad-CAM, MD-CAM, MF-CAM, and G-CAM
 - See both heatmaps and overlay visualizations
 - View top-5 predictions for each image
 - Automatic detection of model architecture
@@ -125,13 +125,12 @@ Place your test images in the `test_images/` folder. The scripts will automatica
 For automatic label detection, name your images with the expected label as a prefix:
 - `A_sample1.jpg` → Expected label: A
 - `B_test.png` → Expected label: B
-- `space_example.jpg` → Expected label: space
+- `C_example.jpg` → Expected label: C
 
 ## 🎯 ASL Classes
 
-The model recognizes 29 ASL classes:
-- Letters: A-Z
-- Special: `del`, `nothing`, `space`
+The model recognizes 24 ASL classes:
+- Letters: A-Z, except J and Z
 
 ## ⚙️ Configuration
 
@@ -169,13 +168,20 @@ SIGMA = POWER             # Sigma for Gaussian-CAM (None = use num_layers)
 
 ## 📝 License
 
-[Include your license information here]
+Under the CC BY-NC 4.0 license, you are free to:
+- Share: copy and redistribute the material in any medium or format.
+- Adapt: remix, transform, and build upon the material.
+Under the following terms:
+- Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- NonCommercial: You may not use the material for commercial purposes.
+
 
 ## 👥 Authors
 
-[Include author information here]
+Elisa Cabana, CUNEF Universidad, Madrid, Spain
+elisa.cabana@cunef.edu
 
 ## 🙏 Acknowledgments
 
-- This project implements various Class Activation Mapping techniques for model interpretability
-- Supports models with pre-trained backbones (MobileNet, ResNet, DenseNet, etc.)
+- The model used here was developed in the following study:
+Cabana, E. (2025). Advancing Accessible AI: A Comprehensive Dataset and Neural Models for Real-Time American Sign Language Alphabet Classification. In: Arai, K. (eds) Intelligent Systems and Applications. IntelliSys 2025. Lecture Notes in Networks and Systems, vol 1567. Springer, Cham. https://doi.org/10.1007/978-3-032-00071-2_15. Dataset and model: https://github.com/ecabestadistica/SignLanguageRecognition/  
