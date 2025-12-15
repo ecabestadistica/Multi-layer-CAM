@@ -184,4 +184,7 @@ elisa.cabana@cunef.edu
 ## 🙏 Acknowledgments
 
 - The model used here was developed in the following study:
-Cabana, E. (2025). Advancing Accessible AI: A Comprehensive Dataset and Neural Models for Real-Time American Sign Language Alphabet Classification. In: Arai, K. (eds) Intelligent Systems and Applications. IntelliSys 2025. Lecture Notes in Networks and Systems, vol 1567. Springer, Cham. https://doi.org/10.1007/978-3-032-00071-2_15. Dataset and model: https://github.com/ecabestadistica/SignLanguageRecognition/  
+  
+Cabana, E. (2025). Advancing Accessible AI: A Comprehensive Dataset and Neural Models for Real-Time American Sign Language Alphabet Classification. In: Arai, K. (eds) Intelligent Systems and Applications. IntelliSys 2025. Lecture Notes in Networks and Systems, vol 1567. Springer, Cham. https://doi.org/10.1007/978-3-032-00071-2_15. 
+
+Dataset: Cabana Garceran del Vall, Elisa (2025), “American Sign Language Alphabet Dataset”, Mendeley Data, V1. https://data.mendeley.com/datasets/jdyksv2jhh/1
